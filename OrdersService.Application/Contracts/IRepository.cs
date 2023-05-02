@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace OrdersService.Application.Interfaces;
+namespace OrdersService.Application.Contracts;
 
 public interface IRepository<T>
 {

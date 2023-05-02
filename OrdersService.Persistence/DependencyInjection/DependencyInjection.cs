@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OrdersService.Application.Interfaces;
+using OrdersService.Application.Contracts;
 using OrdersService.Domain.Entities;
 using OrdersService.Persistence.DbContext;
 using OrdersService.Persistence.Repository;

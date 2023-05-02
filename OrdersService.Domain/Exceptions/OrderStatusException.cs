@@ -2,24 +2,23 @@
 
 namespace OrdersService.Domain.Exceptions;
 
-[Serializable]
-public class BadRequestException : Exception
+public class OrderStatusException : Exception
 {
-    public BadRequestException()
+    public OrderStatusException()
     {
     }
 
-    public BadRequestException(string message)
+    public OrderStatusException(string message)
         : base(message)
     {
     }
 
-    public BadRequestException(string message, Exception innerException)
+    public OrderStatusException(string message, Exception innerException)
         : base(message, innerException)
     {
     }
 
-    protected BadRequestException(
+    protected OrderStatusException(
         SerializationInfo info,
         StreamingContext context) : base(info, context)
     {

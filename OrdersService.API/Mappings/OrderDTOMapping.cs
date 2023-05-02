@@ -1,12 +1,11 @@
 ﻿using OrdersService.Domain.Entities;
-using OrdersService.Domain.Exceptions;
 using OrdersService.DTO;
 
 namespace OrdersService.Mappings;
 
 public static class OrderDTOMapping
 {
-    public static ResponceOrderDTO ConvertOrderToResponce(Order order)
+    public static ResponceOrderDTO MapOrderToResponce(Order order)
     {
         var orderForResponce = new ResponceOrderDTO()
         {
@@ -27,7 +26,7 @@ public static class OrderDTOMapping
         return orderForResponce;
     }
 
-    public static Order ConvertCreateOrderToOrder(CreateOrderDTO createOrder)
+    public static Order MapCreateOrderToOrder(CreateOrderDTO createOrder)
     {
         var order = new Order()
         {
@@ -48,10 +47,10 @@ public static class OrderDTOMapping
         return order;
     }
 
-    public static Order ConvertUpdateOrderToOrder(UpdateOrderDTO updateOrder)
+    public static Order MapUpdateOrderToOrder(UpdateOrderDTO updateOrder)
     {
         if (!Enum.TryParse(updateOrder.status, out OrderStatus status))
-            throw new BadRequestException("Некорректный статус");
+            throw new Exception("Некорректный статус");
         var order = new Order()
         {
             Status = status,

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OrdersService.Application.Interfaces;
-using OrdersService.Domain;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using OrdersService.Application.Contracts;
 using OrdersService.Domain.Entities;
 
 namespace OrdersService.Persistence.DbContext;
@@ -10,6 +10,8 @@ public class OrdersDbContext : Microsoft.EntityFrameworkCore.DbContext, IOrdersD
     public DbSet<Order> Orders { get; set; }
 
     public DbSet<Product> Products { get; set; }
+
+    public DatabaseFacade Database => base.Database;
 
     public OrdersDbContext(DbContextOptions<OrdersDbContext> options)
         : base(options)

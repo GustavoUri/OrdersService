@@ -1,6 +1,5 @@
 ﻿using System.Linq.Expressions;
-using OrdersService.Application.Interfaces;
-using OrdersService.Domain;
+using OrdersService.Application.Contracts;
 using OrdersService.Domain.Entities;
 
 namespace OrdersService.Persistence.Repository;

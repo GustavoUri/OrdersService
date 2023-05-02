@@ -1,6 +1,6 @@
 ﻿using OrdersService.Domain.Entities;
 
-namespace OrdersService.Application.Interfaces;
+namespace OrdersService.Application.Contracts;
 
 public interface IOrdersService
 {
